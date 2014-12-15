@@ -1,7 +1,32 @@
-<global>
-    <models>
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sitepoint_Articles>
+            <version>0.1.1</version>    <!-- Version of module -->
+        </Sitepoint_Articles>
+    </modules>
+    <frontend>
+        <routers>
+            <articles>
+                <use>standard</use>
+                <args>
+                    <module>Sitepoint_Articles</module>
+                    <frontName>articles</frontName>
+                </args>
+            </articles>
+        </routers>
+        <layout>
+            <updates>
+                <articles>
+                    <file>articles.xml</file> <!-- our layout file name -->
+                </articles>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+	<models>
         <articles>
-            <class>Sitepoint_Articles_Model</class> <!-- Model class files -->     
+            <class>Sitepoint_Articles_Model</class> <!-- Model class files -->
             <resourceModel>articles_mysql4</resourceModel> <!--Resource model -->
         </articles>
         <articles_mysql4>
@@ -33,4 +58,12 @@
             </connection>
         </articles_read>
     </resources>
-</global>
+		<blocks>
+            <articles>
+                <class>Sitepoint_Articles_Block</class>
+            </articles>
+        </blocks>
+    </global>
+</config>
+
+
