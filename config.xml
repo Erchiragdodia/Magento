@@ -1,0 +1,36 @@
+<global>
+    <models>
+        <articles>
+            <class>Sitepoint_Articles_Model</class> <!-- Model class files -->     
+            <resourceModel>articles_mysql4</resourceModel> <!--Resource model -->
+        </articles>
+        <articles_mysql4>
+            <class>Sitepoint_Articles_Model_Mysql4</class>
+            <entities>
+                <articles>
+                    <table>articles</table>  <!-- Db table name  -->
+                </articles>
+            </entities>
+        </articles_mysql4>
+    </models>
+    <resources>  
+        <articles_setup>
+            <setup>
+                <module>Sitepoint_Articles</module>
+            </setup>
+            <connection>
+                <use>core_setup</use>
+            </connection>
+        </articles_setup>
+        <articles_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </articles_write>
+        <articles_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </articles_read>
+    </resources>
+</global>
